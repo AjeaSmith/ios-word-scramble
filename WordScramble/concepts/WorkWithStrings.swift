@@ -20,7 +20,7 @@ struct WorkWithStrings: View {
         let range = NSRange(location: 0, length: word.utf16.count)
         let misspelled = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
         
-        let allGood = misspelled.location == NSNotFound
+        _ = misspelled.location == NSNotFound
     }
 }
 

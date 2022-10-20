@@ -35,7 +35,10 @@ struct ContentView: View {
             .navigationTitle(rootWord)
             .toolbar {
                 ToolbarItem{
-                    Button("New Word", action: startGame)
+                    Button("New Word"){
+                        startGame()
+                        usedWords = []
+                    }
                 }
             }
             .onSubmit(addNewWord)
